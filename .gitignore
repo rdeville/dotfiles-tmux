@@ -1,7 +1,7 @@
 # Project Specific Gitignore
 
 .vimrc.local
-.tmuxinator.yml
+.tmux*.y*ml
 .old/
 .tmp/
 .undodir
@@ -871,6 +871,8 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/linux,ansible,macos,windows,python,direnv,archive,archives,backup,emacs,vim,code,hugo,latex,nohup,ssh,tags,test,vagrant,virtualenv,zsh,dotenv,venv
 
 ### END MKDOCS TEMPLATE ###
+
+!lib
 
 # ******************************************************************************
 # VIM MODELINE
