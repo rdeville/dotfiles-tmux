@@ -14,7 +14,7 @@ battery_default[separator_right]=''
 battery_default[separator_left]=''
 
 battery_default[icon]=''
-battery_default[icon_plugged]='ﮣ'
+battery_default[icon_plugged]='ﮣ '
 battery_default[bar]='gradient'
 battery_default[bar_type]='vertical'
 battery_default[bar_size]=10
@@ -212,19 +212,21 @@ main() {
   _get_battery_settings
   _get_battery_value
 
-  gradient_color="$(_get_gradient_color)"
 
-  if [[ -z "${battery[val_pourcent]}" ]]
-  then
-    return 0
-  fi
 
   _compute_bg_fg "separator_left"
   _compute_bg_fg "separator_right"
-  for i_module in ${battery[order]}
-  do
-    _compute_bg_fg "${i_module}"
-  done
+  if [[ -z "${battery[val_pourcent]}" ]]
+  then
+    gradient_color="${battery_default[bar_tier4_color_full]}"
+    _compute_bg_fg "icon_plugged"
+  else
+    gradient_color="$(_get_gradient_color)"
+    for i_module in ${battery[order]}
+    do
+      _compute_bg_fg "${i_module}"
+    done
+  fi
   _compute_bg_fg "end"
 
   echo -e "${battery_string}"
