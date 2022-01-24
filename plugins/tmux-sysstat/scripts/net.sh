@@ -14,8 +14,14 @@ net_default[separator_right]=''
 net_default[separator_left]=''
 net_default[devices]=''
 
-net_default[online_icon]=''
-net_default[offline_icon]=''
+net_default[ping_timeout]='3'
+net_default[ping_route]='wikipedia.org'
+
+net_default[online_icon]=' '
+net_default[online_fg]='#4caf50'
+
+net_default[offline_icon]=' '
+net_default[offline_fg]='#f44336'
 
 net_default[up]='true'
 net_default[up_icon]=' '
@@ -47,7 +53,8 @@ net_default[down_bar_tier2_value]='5000'
 net_default[down_bar_tier3_value]='7500'
 net_default[down_bar_tier4_value]='10000'
 
-net_default[order]="up_bar up_value up_icon down_icon down_value down_bar"
+
+net_default[order]="up_bar up_value up_icon status down_icon down_value down_bar"
 
 _get_net_settings() {
   for idx in "${!net_default[@]}"
@@ -121,7 +128,15 @@ _get_net_value(){
   then
     net[down_pourcent]=100
   fi
+
+  if ping -c 1 -w "${net[ping_timeout]}" "${net[ping_route]}" &> /dev/null
+  then
+    net[status]="online"
+  else
+    net[status]="offline"
+  fi
 }
+
 
 _get_gradient_color() {
   local type=$1
@@ -229,6 +244,10 @@ _compute_bg_fg(){
       ;;
     end)
       net_string+="#[fg=${net[bg]}]"
+      ;;
+    status)
+      net_string+="#[bg=${bg_clr},fg=${fg_clr}]"
+      net_string+=" ${net["${net[status]}_icon"]}"
       ;;
     *_bar)
       net_string+="#[fg=${fg_clr},bg=${bg_clr}] "

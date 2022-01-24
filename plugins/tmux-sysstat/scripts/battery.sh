@@ -29,6 +29,7 @@ battery_default[bar_tier1_color_discharging]='#f44336'
 battery_default[bar_tier2_color_discharging]='#ff9800'
 battery_default[bar_tier3_color_discharging]='#ffeb3b'
 battery_default[bar_tier4_color_discharging]='#8bc34a'
+battery_default[bar_tier4_color_full]='#8bc34a'
 
 battery_default[icon_discharging_0]=''
 battery_default[icon_discharging_1]=''
@@ -43,6 +44,8 @@ battery_default[icon_charging_2]=''
 battery_default[icon_charging_3]=''
 battery_default[icon_charging_4]=''
 battery_default[icon_charging_5]=''
+
+battery_default[icon_full_5]=''
 
 battery_default[order]="icon status bar pourcent remaining"
 
@@ -75,6 +78,12 @@ _get_battery_value() {
 
   if command -v upower &> /dev/null
   then
+    if [[ "${battery[status]}" == "full" ]]
+    then
+      battery[val_remain]="--:--"
+      return 0
+    fi
+
     remaining_time="$(upower -i /org/freedesktop/UPower/devices/battery_${POWER_SUPPLY_NAME} \
       | grep 'time to' | cut -d ':' -f 2)"
     if echo "${remaining_time}" | grep -q "hours" &> /dev/null
