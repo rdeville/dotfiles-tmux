@@ -39,7 +39,7 @@ _get_uptime_value() {
   local days=$(( seconds / 60 / 60 / 24))
   local hours=$(( seconds / 60 / 60 % 24))
   local minutes=$(( seconds/ 60 % 60))
-  (( $days > 0 )) && uptime[value]="{days} Days "
+  (( $days > 0 )) && uptime[value]="${days} Days "
   uptime[value]+="$(printf "%02d:%02d" "${hours}" "${minutes}")"
 }
 

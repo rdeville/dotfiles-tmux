@@ -16,6 +16,8 @@ module[session]="${SCRIPTPATH}/scripts/session.sh"
 module[window]="${SCRIPTPATH}/scripts/window.sh"
 module[uptime]="${SCRIPTPATH}/scripts/uptime.sh"
 module[hostname]="${SCRIPTPATH}/scripts/hostname.sh"
+module[battery]="${SCRIPTPATH}/scripts/battery.sh"
+module[online]="${SCRIPTPATH}/scripts/online.sh"
 
 main() {
   local nb_cols=$(( $(tput cols) / 2 - 1 ))

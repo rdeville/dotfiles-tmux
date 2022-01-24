@@ -14,6 +14,9 @@ net_default[separator_right]=''
 net_default[separator_left]=''
 net_default[devices]=''
 
+net_default[online_icon]=''
+net_default[offline_icon]=''
+
 net_default[up]='true'
 net_default[up_icon]=' '
 net_default[up_bar]='gradient'
