@@ -11,13 +11,14 @@ module[mem]="${SCRIPTPATH}/scripts/mem.sh"
 module[net]="${SCRIPTPATH}/scripts/net.sh"
 module[disk]="${SCRIPTPATH}/scripts/disk.sh"
 module[date]="${SCRIPTPATH}/scripts/date.sh"
-module[mode]="${SCRIPTPATH}/scripts/mode.sh"
+module[mode_indicator]="${SCRIPTPATH}/scripts/mode_indicator.sh"
 module[session]="${SCRIPTPATH}/scripts/session.sh"
 module[window]="${SCRIPTPATH}/scripts/window.sh"
 module[uptime]="${SCRIPTPATH}/scripts/uptime.sh"
 module[hostname]="${SCRIPTPATH}/scripts/hostname.sh"
 module[battery]="${SCRIPTPATH}/scripts/battery.sh"
 module[online]="${SCRIPTPATH}/scripts/online.sh"
+module[ip]="${SCRIPTPATH}/scripts/ip.sh"
 
 main() {
   local nb_cols=$(( $(tput cols) / 2 - 1 ))

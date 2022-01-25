@@ -10,8 +10,6 @@ declare -A window
 declare -A window_default
 window_default[bg]='#000000'
 window_default[fg]='#ffffff'
-window_default[separator_right]=' '
-window_default[separator_left]=''
 
 window_default[current_bg]='#00ff00'
 window_default[current_fg]='#000000'
@@ -25,6 +23,8 @@ _get_window_settings() {
   do
     window[$idx]=$(get_tmux_option "@window_${idx}" "${window_default[$idx]}")
   done
+
+  session[separator_right]=$(get_tmux_option "@right_separator")
 }
 
 
@@ -44,7 +44,6 @@ main() {
     fg_clr="${window[fg]}"
     bg_clr="${window[bg]}"
   fi
-
 
   if [[ "${window_state}" =~ "current" ]]
   then
