@@ -1,6 +1,7 @@
-# description
+#!/usr/bin/env bash
+# Description
 # ==============================================================================
-# list of materials colors set into tmux variables
+# List of materials colors set into tmux variables
 
 red_50="#ffebee"
 red_100="#ffcdd2"
