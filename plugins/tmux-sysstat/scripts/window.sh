@@ -14,7 +14,7 @@ window_default[fg]='#ffffff'
 window_default[current_bg]='#00ff00'
 window_default[current_fg]='#000000'
 
-window_default[format]=' #I:#W'
+window_default[format]='#I:#W'
 
 window_default[order]='format'
 
