@@ -10,8 +10,6 @@ declare -A hostname
 declare -A hostname_default
 hostname_default[bg]='#636363'
 hostname_default[fg]='#ffffff'
-hostname_default[separator_right]=''
-hostname_default[separator_left]=''
 
 hostname_default[icon]=" "
 
@@ -25,11 +23,10 @@ _get_hostname_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    hostname[separator_right]=$(get_tmux_option "@right_separator")
-    echo "${hostname[separator_right]}"
+    hostname[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    hostname[separator_left]=$(get_tmux_option "@left_separator")
+    hostname[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -57,7 +54,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      hostname_string+="#[bg=${hostname[bg]}]"
+      hostname_string+="#[fg=${hostname[bg]}]"
       hostname_string+="${hostname[${idx_name}]}"
       ;;
     end)

@@ -10,8 +10,6 @@ declare -A net
 declare -A net_default
 net_default[bg]='#212121'
 net_default[fg]='gradient'
-net_default[separator_right]=''
-net_default[separator_left]=''
 net_default[devices]=''
 
 net_default[ping_timeout]='3'
@@ -64,10 +62,10 @@ _get_net_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    net[separator_right]=$(get_tmux_option "@right_separator")
+    net[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    net[separator_left]=$(get_tmux_option "@left_separator")
+    net[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -98,7 +96,6 @@ _get_net_value(){
     # Remove loopback, docker and bridge card
     devices=${devices// br* / }
     devices=${devices// docker* / }
-    devices=${devices/lo / }
   fi
 
   IFS=" " read -a devices <<<$(echo ${devices})
@@ -164,17 +161,17 @@ _get_gradient_color() {
       tier3_clr=${net[down_bar_tier3_color]}
       tier2_clr=${net[down_bar_tier2_color]}
       tier1_clr=${net[down_bar_tier1_color]}
-      val=$(echo "${net[up_val]}"| awk '{printf("%d",$1+.5)}')
+      val=$(echo "${net[down_val]}"| awk '{printf("%d",$1+.5)}')
       ;;
   esac
 
-  if (( ${val} >= ${tier4} ))
+  if [[ "${val}" -ge "${tier4}" ]]
   then
     echo "${tier4_clr}"
-  elif (( ${val} >= ${tier3} ))
+  elif [[ "${val}" -ge "${tier3}" ]]
   then
     echo "${tier3_clr}"
-  elif (( ${val} >= ${tier2} ))
+  elif [[ "${val}" -ge "${tier2}" ]]
   then
     echo "${tier2_clr}"
   else
@@ -239,14 +236,14 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      net_string+="#[bg=${net[bg]}]"
+      net_string+="#[fg=${net[bg]}]"
       net_string+="${net[${idx_name}]}"
       ;;
     end)
       net_string+="#[fg=${net[bg]}]"
       ;;
     status)
-      net_string+="#[bg=${bg_clr},fg=${fg_clr}]"
+      net_string+="#[bg=${bg_clr},fg=${net_default[online_fg]}]"
       net_string+=" ${net["${net[status]}_icon"]}"
       ;;
     *_bar)

@@ -10,8 +10,6 @@ declare -A session
 declare -A session_default
 session_default[bg]='#212121'
 session_default[fg]='#ffffff'
-session_default[separator_right]=''
-session_default[separator_left]=''
 session_default[session]='#S'
 
 session_default[icon]=" "
@@ -26,10 +24,10 @@ _get_session_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    session[separator_right]=$(get_tmux_option "@right_separator")
+    session[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    session[separator_left]=$(get_tmux_option "@left_separator")
+    session[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -47,7 +45,7 @@ _compute_bg_fg(){
   case "${idx_name}" in
     session)
       session_string+="#[bg=${session[bg]},fg=${session[fg]}]"
-      session_string+=" #S"
+      session_string+=" ${session[$idx_name]}"
       ;;
     separator_left)
       if ! tmux show-option -gqv "status-left" | grep -q -E "^#\(${SCRIPTPATH}/$(basename $0)" &> /dev/null
@@ -57,11 +55,11 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      session_string+="#[bg=${session[bg]}]"
+      session_string+="#[fg=${session[bg]}]"
       session_string+="${session[${idx_name}]}"
       ;;
     end)
-      session_string+="#[fg=${session[bg]}]"
+      session_string+=" #[fg=${session[bg]}]"
       ;;
     *)
       session_string+="#[bg=${session[bg]},fg=${session[fg]}]"

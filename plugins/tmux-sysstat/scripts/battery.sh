@@ -10,8 +10,6 @@ declare -A battery
 declare -A battery_default
 battery_default[bg]='#212121'
 battery_default[fg]='gradient'
-battery_default[separator_right]=''
-battery_default[separator_left]=''
 
 battery_default[icon]=''
 battery_default[icon_plugged]='ﮣ '
@@ -57,10 +55,10 @@ _get_battery_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    battery[separator_right]=$(get_tmux_option "@right_separator")
+    battery[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    battery[separator_left]=$(get_tmux_option "@left_separator")
+    battery[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -166,7 +164,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      battery_string+="#[bg=${battery[bg]}]"
+      battery_string+="#[fg=${battery[bg]}]"
       battery_string+="${battery[${idx_name}]}"
       ;;
     end)

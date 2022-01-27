@@ -32,11 +32,10 @@ _get_online_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    online[separator_right]=$(get_tmux_option "@right_separator")
-    echo "${online[separator_right]}"
+    online[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    online[separator_left]=$(get_tmux_option "@left_separator")
+    online[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -72,7 +71,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      online_string+="#[bg=${bg_clr}]"
+      online_string+="#[fg=${bg_clr}]"
       online_string+="${online[${idx_name}]}"
       ;;
     end)

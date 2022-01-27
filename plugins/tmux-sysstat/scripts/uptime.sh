@@ -10,8 +10,6 @@ declare -A uptime
 declare -A uptime_default
 uptime_default[bg]='#636363'
 uptime_default[fg]='#ffffff'
-uptime_default[separator_right]=''
-uptime_default[separator_left]=''
 
 uptime_default[icon]="⬆️"
 
@@ -25,10 +23,10 @@ _get_uptime_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    uptime[separator_right]=$(get_tmux_option "@right_separator")
+    uptime[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    uptime[separator_left]=$(get_tmux_option "@left_separator")
+    uptime[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -63,7 +61,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      uptime_string+="#[bg=${uptime[bg]}]"
+      uptime_string+="#[fg=${uptime[bg]}]"
       uptime_string+="${uptime[${idx_name}]}"
       ;;
     end)

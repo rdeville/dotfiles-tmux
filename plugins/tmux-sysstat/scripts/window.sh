@@ -24,17 +24,20 @@ _get_window_settings() {
     window[$idx]=$(get_tmux_option "@window_${idx}" "${window_default[$idx]}")
   done
 
-  session[separator_right]=$(get_tmux_option "@right_separator")
+  window[separator_left]=$(get_tmux_option "@separator_left")
+  window[separator_right]=$(get_tmux_option "@separator_left")
 }
 
+_compute_bg_fg(){
+  local idx_name=$1
+  local fg_clr=""
+  local bg_clr=""
+  local gradient_color=""
 
-main() {
-  local window_string=""
-  local window_state="$1"
-  local up_gradient_color=""
-  local down_gradient_color=""
-
-  _get_window_settings
+  if [[  -z "${window[$idx_name]}" && "${idx_name}" != "end" ]]
+  then
+    return 0
+  fi
 
   if [[ "${window_state}" =~ current ]]
   then
@@ -45,17 +48,46 @@ main() {
     bg_clr="${window[bg]}"
   fi
 
-  if [[ "${window_state}" =~ "current" ]]
-  then
-    window_string+="#[bg=${bg_clr},fg=${window[bg]}]"
-    window_string+="${window[separator_right]}"
-  fi
-  window_string+="#[fg=${fg_clr},bg=${bg_clr}]"
-  window_string+="${window[format]}"
-  window_string+="#[bg=${window[bg]},fg=${bg_clr}]"
-  window_string+="${window[separator_right]}"
+  case "${idx_name}" in
+    separator_left)
+      if ! tmux show-option -gqv "status-left" | grep -q -E "^#\(${SCRIPTPATH}/$(basename $0)" &> /dev/null
+      then
+        window_string+="#[bg=${bg_clr},fg=${window[bg]}]"
+        window_string+="${window[${idx_name}]}"
+      fi
+      ;;
+    separator_right)
+      window_string+="#[bg=${window[bg]},fg=${bg_clr}]"
+      window_string+="${window[${idx_name}]}"
+      ;;
+    end)
+      window_string+=" #[bg=${bg_clr},fg=${fg_clr}]"
+      ;;
+    *)
+      window_string+="#[bg=${bg_clr},fg=${fg_clr}]"
+      window_string+=" ${window[$idx_name]}"
+      ;;
+  esac
+}
+
+main() {
+  local window_string=""
+  local window_state="$1"
+  local up_gradient_color=""
+  local down_gradient_color=""
+
+  _get_window_settings
+
+  _compute_bg_fg "separator_left"
+  for i_module in ${window[order]}
+  do
+    _compute_bg_fg "${i_module}"
+  done
+  _compute_bg_fg "end"
+  _compute_bg_fg "separator_right"
 
   echo -e "${window_string}"
+
 }
 
 main "$@"

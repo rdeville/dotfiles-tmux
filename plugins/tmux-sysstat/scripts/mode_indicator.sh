@@ -10,8 +10,6 @@ declare -A mode_indicator
 declare -A mode_indicator_default
 mode_indicator_default[bg]='#424242'
 mode_indicator_default[fg]='#ffffff'
-mode_indicator_default[separator_right]=''
-mode_indicator_default[separator_left]=''
 
 mode_indicator_default[prefix]="WAIT"
 mode_indicator_default[prefix_icon]="⏰"
@@ -43,10 +41,10 @@ _get_mode_indicator_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    mode_indicator[separator_right]=$(get_tmux_option "@right_separator")
+    mode_indicator[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    mode_indicator[separator_left]=$(get_tmux_option "@left_separator")
+    mode_indicator[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -111,10 +109,6 @@ _compute_bg_fg(){
       tmp_style="${tmp_style//fg/tmp___fg}"
       tmp_style="${tmp_style//bg/fg}"
       tmp_style="${tmp_style//tmp___fg/bg}"
-      echo "====="
-      echo "$tmp_style"
-      echo "${mode_indicator[style]}"
-      echo "====="
       mode_indicator_string+=" ${tmp_style}"
       ;;
     *)

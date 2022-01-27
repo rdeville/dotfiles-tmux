@@ -10,8 +10,6 @@ declare -A mem
 declare -A mem_default
 mem_default[bg]='#424242'
 mem_default[fg]='gradient'
-mem_default[separator_right]=''
-mem_default[separator_left]=''
 
 mem_default[icon]=" "
 mem_default[bar]='gradient'
@@ -35,10 +33,10 @@ _get_mem_settings() {
   done
   if [[ "${option}" == "status-right" ]]
   then
-    mem[separator_right]=$(get_tmux_option "@right_separator")
+    mem[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    mem[separator_left]=$(get_tmux_option "@left_separator")
+    mem[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -136,14 +134,14 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      mem_string+="#[bg=${mem[bg]}]"
+      mem_string+="#[fg=${mem[bg]}]"
       mem_string+="${mem[${idx_name}]}"
       ;;
     end)
       mem_string+="#[fg=${mem[bg]}]"
       ;;
     bar)
-      mem_string+="#[bg=black]"
+      mem_string+=" #[bg=black]"
       mem_string+="#[fg=${fg_clr}]"
       if [[ "${mem[bar_type]}" == "horizontal" ]]
       then
@@ -154,6 +152,7 @@ _compute_bg_fg(){
       else
         mem_string+="ERROR-Wrong bar_type"
       fi
+      mem_string+="#[bg=${bg_clr}]"
       ;;
     *)
       mem_string+="#[bg=${bg_clr}]"

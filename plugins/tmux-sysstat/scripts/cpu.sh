@@ -10,8 +10,6 @@ declare -A cpu
 declare -A cpu_default
 cpu_default[bg]='#212121'
 cpu_default[fg]='gradient'
-cpu_default[separator_right]=''
-cpu_default[separator_left]=''
 
 cpu_default[icon]=" "
 cpu_default[bar]='gradient'
@@ -36,10 +34,10 @@ _get_cpu_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    cpu[separator_right]=$(get_tmux_option "@right_separator")
+    cpu[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    cpu[separator_left]=$(get_tmux_option "@left_separator")
+    cpu[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -148,14 +146,14 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      cpu_string+="#[bg=${cpu[bg]}]"
+      cpu_string+="#[fg=${cpu[bg]}]"
       cpu_string+="${cpu[${idx_name}]}"
       ;;
     end)
       cpu_string+="#[fg=${cpu[bg]}]"
       ;;
     bar)
-      cpu_string+="#[bg=black]"
+      cpu_string+=" #[bg=black]"
       cpu_string+="#[fg=${fg_clr}]"
       if [[ "${cpu[bar_type]}" == "horizontal" ]]
       then
@@ -166,6 +164,7 @@ _compute_bg_fg(){
       else
         cpu_string+="ERROR-Wrong bar_type"
       fi
+      cpu_string+="#[bg=${bg_clr}]"
       ;;
     *)
       cpu_string+="#[bg=${bg_clr}]"

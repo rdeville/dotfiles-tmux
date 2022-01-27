@@ -10,8 +10,6 @@ declare -A ip
 declare -A ip_default
 ip_default[bg]='#636363'
 ip_default[fg]='#ffffff'
-ip_default[separator_right]=''
-ip_default[separator_left]=''
 
 ip_default[icon]=" "
 ip_default[icon_vpn]="旅"
@@ -27,11 +25,10 @@ _get_ip_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    ip[separator_right]=$(get_tmux_option "@right_separator")
-    echo "${ip[separator_right]}"
+    ip[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    ip[separator_left]=$(get_tmux_option "@left_separator")
+    ip[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -63,7 +60,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      ip_string+="#[bg=${ip[bg]}]"
+      ip_string+="#[fg=${ip[bg]}]"
       ip_string+="${ip[${idx_name}]}"
       ;;
     end)

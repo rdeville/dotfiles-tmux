@@ -10,15 +10,13 @@ declare -A disk
 declare -A disk_default
 disk_default[bg]='#424242'
 disk_default[fg]='gradient'
-disk_default[separator_right]=''
-disk_default[separator_left]=''
 
 disk_default[icon]=" "
 disk_default[icon_color]="#f0f0f0"
 disk_default[bar]='gradient'
 disk_default[bar_type]='vertical'
 disk_default[bar_size]=10
-disk_default[pourcent]=''
+disk_default[pourcent]='true'
 disk_default[bar_color]='#ffffff'
 disk_default[bar_tier1_color]='#8bc34a'
 disk_default[bar_tier2_color]='#ffeb3b'
@@ -37,10 +35,10 @@ _get_disk_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    disk[separator_right]=$(get_tmux_option "@right_separator")
+    disk[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    disk[separator_left]=$(get_tmux_option "@left_separator")
+    disk[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -126,7 +124,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      disk_string+="#[bg=${disk[bg]}]"
+      disk_string+="#[fg=${disk[bg]}]"
       disk_string+="${disk[${idx_name}]}"
       ;;
     end)

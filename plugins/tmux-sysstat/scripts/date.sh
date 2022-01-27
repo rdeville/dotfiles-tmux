@@ -10,9 +10,6 @@ declare -A date
 declare -A date_default
 date_default[bg]='#424242'
 date_default[fg]='#ffffff'
-date_default[separator_right]=''
-date_default[separator_left]=''
-date_default[devices]=''
 
 date_default[icon]=''
 date_default[format]='%a %d %b | %H:%M'
@@ -27,10 +24,10 @@ _get_date_settings() {
 
   if [[ "${option}" == "status-right" ]]
   then
-    date[separator_right]=$(get_tmux_option "@right_separator")
+    date[separator_right]=$(get_tmux_option "@separator_right")
   elif [[ "${option}" == "status-left" ]]
   then
-    date[separator_left]=$(get_tmux_option "@left_separator")
+    date[separator_left]=$(get_tmux_option "@separator_left")
   fi
 }
 
@@ -61,7 +58,7 @@ _compute_bg_fg(){
       fi
       ;;
     separator_right)
-      date_string+="#[bg=${date[bg]}]"
+      date_string+="#[fg=${date[bg]}]"
       date_string+="${date[${idx_name}]}"
       ;;
     end)
