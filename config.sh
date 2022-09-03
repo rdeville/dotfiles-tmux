@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2154,SC2034
 
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+SCRIPTPATH="$( cd -- "$(dirname "$0")" || exit 1 >/dev/null 2>&1 ; pwd -P )"
 
 # Source my colors definition
 source "${SCRIPTPATH}/colors.sh"
@@ -26,7 +27,7 @@ modules=(
 
 for i_module in "${modules[@]}"
 do
-  declare -A ${i_module}
+  declare -A "${i_module}"
 done
 
 # Set global variable to be used with main tmux config
@@ -346,9 +347,11 @@ host_file="${SCRIPTPATH}/$(hostname)/config.sh"
 user_file="${SCRIPTPATH}/$(hostname)/$(whoami)/config.sh"
 if [[ -f "${host_file}" ]]
 then
+  # shellcheck disable=SC1090
   source "${host_file}"
   if [[ -f "${user_file}" ]]
   then
+    # shellcheck disable=SC1090
     source "${user_file}"
   fi
 fi
@@ -398,7 +401,7 @@ do
   declare -n tmp_array="${i_module}"
   for i_var in "${!tmp_array[@]}"
   do
-    tmux set -g @${i_module}_${i_var}  "${tmp_array[$i_var]}"
+    tmux set -g "@${i_module}_${i_var}"  "${tmp_array[$i_var]}"
   done
   unset tmp_array
 done
@@ -474,4 +477,4 @@ tmux bind -T off F12 "
   set -u status-style
   refresh-client -S"
 
-tmux run '~/.config/tmux/plugins/tmux-sysstat/sysstat.tmux'
+tmux run "${HOME}/.config/tmux/plugins/tmux-sysstat/sysstat.tmux"
