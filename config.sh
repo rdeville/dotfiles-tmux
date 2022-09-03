@@ -408,6 +408,15 @@ done
 
 # Global status variables
 # =============================================================================
+# Set terminal window title
+tmux set-option -g set-titles on
+tmux set-option -g set-titles-string "#S / #I : #W"
+
+# Make Ctrl + Arrow working
+# -----------------------------------------------------------------------------
+tmux set-window-option -g xterm-keys on
+tmux set -g terminal-overrides "xterm*:kLFT5=\eOD:kRIT5=\eOC:kUP5=\eOA:kDN5=\eOB:smkx@:rmkx@"
+#tmux set-window-option -g alternate-screen on
 # Main status line information
 # -----------------------------------------------------------------------------
 # Update the status line every interval seconds.
@@ -448,6 +457,13 @@ tmux set -g status-left "${status[left]}"
 tmux set -g status-right-length 200
 # Content of the right status bar
 tmux set -g status-right "${status[right]}"
+
+# tmux set-hook -g client-attached 'display-message "hi world"'
+# tmux set-hook -g client-attached 'osascript -e "display notification \"hello world!\""'
+# tmux set-hook -g after-client-session-changed "osascript -e 'display notification \"hello world!\"'"
+
+tmux bind-key C-Tab next-window
+tmux bind-key C-S-Tab previous-window
 
 # SSH toggle nested tmux key binding
 # -----------------------------------------------------------------------------
