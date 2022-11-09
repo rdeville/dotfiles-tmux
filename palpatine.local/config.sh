@@ -16,9 +16,6 @@ mem[order]=""
 cpu[order]=""
 date[order]="icon format"
 
-
-
-
 # Set status background color for darth-vader
 status[bg]="${red_500}"
 

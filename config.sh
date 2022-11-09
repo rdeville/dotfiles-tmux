@@ -462,8 +462,8 @@ tmux set -g status-right "${status[right]}"
 # tmux set-hook -g client-attached 'osascript -e "display notification \"hello world!\""'
 # tmux set-hook -g after-client-session-changed "osascript -e 'display notification \"hello world!\"'"
 
-tmux bind-key C-Tab next-window
-tmux bind-key C-S-Tab previous-window
+tmux set -g bind-key C-Tab next-window
+tmux set -g bind-key C-S-Tab previous-window
 
 # SSH toggle nested tmux key binding
 # -----------------------------------------------------------------------------
@@ -493,4 +493,11 @@ tmux bind -T off F12 "
   set -u status-style
   refresh-client -S"
 
+if [[ "$(uname)" == "Darwin" ]]
+then
+  tmux set -g pane-border-format " #{pane_index} #(ps -t #{pane_tty} -o args= | head -n 1) "
+else
+  tmux set -g pane-border-format " #{pane_index} #(ps --no-headers -t #{pane_tty} -o args -o-c) "
+fi
+tmux set -g pane-border-format " #{pane_index} #(ps -t #{pane_tty} -o args= | tail -1) "
 tmux run "${HOME}/.config/tmux/plugins/tmux-sysstat/sysstat.tmux"
