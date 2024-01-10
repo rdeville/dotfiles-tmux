@@ -87,7 +87,6 @@ main() {
   _compute_bg_fg "separator_right"
 
   echo -e "${window_string}"
-
 }
 
 main "$@"
@@ -96,4 +95,3 @@ main "$@"
 # VIM windowLINE
 # vim: ft=sh: fdm=indent
 # ******************************************************************************
-
