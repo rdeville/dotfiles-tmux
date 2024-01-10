@@ -4,6 +4,7 @@
 modules=(
   "separator"
   "mode_indicator"
+  "continuum"
   "session"
   "window"
   "hostname"
@@ -35,7 +36,7 @@ status[fg_inv]="${grey_900}"
 status[left_module]="mode_indicator session"
 status[left_prefix]=""
 status[left_suffix]="#[bg=${status[bg]}]${separator[left]}"
-status[right_module]="hostname ip uptime battery disk net mem cpu date"
+status[right_module]="hostname ip uptime battery disk net mem cpu continuum date"
 status[right_prefix]="#[fg=${status[bg]}]"
 status[right_suffix]=" "
 status[intervale]=2
@@ -225,6 +226,11 @@ cpu[bar_tier2_color]="${tier_clr[2]}"
 cpu[bar_tier3_color]="${tier_clr[3]}"
 cpu[bar_tier4_color]="${tier_clr[4]}"
 
+# Continuum Module
+# -----------------------------------------------------------------------------
+continuum[bg]="${grey_700}"
+continuum[fg]="${grey_100}"
+
 # Date Module
 # -----------------------------------------------------------------------------
 date[bg]="${grey_800}"
@@ -248,4 +254,5 @@ net[order]="up_value up_icon status down_icon down_value"
 mem[order]="icon bar value"
 cpu[order]="icon bar pourcent load"
 date[order]="icon format"
+continuum[order]="icon value"
 
