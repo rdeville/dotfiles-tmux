@@ -19,11 +19,12 @@ module[hostname]="${SCRIPTPATH}/scripts/hostname.sh"
 module[battery]="${SCRIPTPATH}/scripts/battery.sh"
 module[online]="${SCRIPTPATH}/scripts/online.sh"
 module[ip]="${SCRIPTPATH}/scripts/ip.sh"
+module[continuum]="${SCRIPTPATH}/scripts/continuum.sh"
+
 
 main() {
   local nb_cols=$(( $(tput cols) / 2 - 1 ))
   update_tmux_option "status-right"
-  update_tmux_option "status-left"
   update_tmux_option "status-left"
   update_tmux_option "window-status-format"
   update_tmux_option "window-status-current-format"

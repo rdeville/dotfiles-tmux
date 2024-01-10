@@ -39,7 +39,6 @@ _compute_bg_fg(){
   local idx_name=$1
   local fg_clr=""
   local bg_clr=""
-  local gradient_color=""
 
   if [[  -z "${date[$idx_name]}" && "${idx_name}" != "end" ]]
   then
