@@ -5,6 +5,7 @@
 .old/
 .tmp/
 .undodir
+resurrect/
 
 ### BEGIN MKDOCS TEMPLATE ###
 ### WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG ! ###
