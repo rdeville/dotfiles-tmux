@@ -38,7 +38,8 @@ declare -A LINKS
 LINKS["${DATA_DIR}/tmux"]="${SCRIPTPATH}"
 
 declare -A CRONS
-# CRONS["<PATH|CMD>"]="<RECURRENCE>"
+# shellcheck disable=SC2016
+CRONS['${XDG_DATA_HOME:-${HOME}/.local/share}/tmux/save.sh']="*/15 * * * *"
 
 PKGS=(
 #  "<PKGS_NAME>"
