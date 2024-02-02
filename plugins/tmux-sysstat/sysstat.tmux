@@ -19,7 +19,6 @@ module[hostname]="${SCRIPTPATH}/scripts/hostname.sh"
 module[battery]="${SCRIPTPATH}/scripts/battery.sh"
 module[online]="${SCRIPTPATH}/scripts/online.sh"
 module[ip]="${SCRIPTPATH}/scripts/ip.sh"
-module[continuum]="${SCRIPTPATH}/scripts/continuum.sh"
 
 
 main() {
