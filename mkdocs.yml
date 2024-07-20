@@ -1,7 +1,0 @@
-# Website Information
-# ---------------------------------------------------------------------------
-# If this documentation is a subdocumentation and will be used by monorepo.
-# DO NOT FORGET TO UPDATE BELOW VALUE.
-site_name: "{{ repo_name.path_slug_with_namespace }}"
-
-# DO NOT FORGET TO ADD THE `nav` KEY BELOW.

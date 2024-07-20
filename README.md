@@ -1,97 +1,88 @@
-<!-- markdownlint-disable MD041 MD002 -->
-<div align="center" style="text-align: center;">
+<!-- BEGIN DOTGIT-SYNC BLOCK MANAGED -->
 
-  <!-- Project Title -->
-  <a href="https://framagit.org/rdeville.public/my_dotfiles/tmux">
-    <img src="docs/assets/img/meta/tmux_logo.png" width="100px">
-    <h1>Tmux</h1>
-  </a>
+# 👋 Welcome to Tmux Config
 
-  <!-- Project Badges -->
-  [![License][license_badge]][license]
-  [![Build Status][build_status_badge]][build_status]
+<center>
 
---------------------------------------------------------------------------------
+> ⚠️ IMPORTANT !
+>
+> Main repo is on [framagit.org](https://framagit.org/rdeville-public/dotfiles/tmux).
+>
+> On other online git platforms, they are just mirror of the main repo.
+>
+> Any issues, pull/merge requests, etc., might not be considered on those other
+> platforms.
 
-TODO: Short description as written in `docs/_data/repo.yaml`
+</center>
 
---------------------------------------------------------------------------------
+---
 
-  <b>
-IMPORTANT !
+<center>
 
-Main repo is on [ Framagit][repo_url].<br>
-On other online git platforms, they are just mirror of the main repo.<br>
-Any issues, pull/merge requests, etc., might not be considered on those other
-platforms.
-  </b>
-</div>
+[![Licenses: (MIT OR BEERWARE)][license_badge]][license_url]
+[![Changelog][changelog_badge]][changelog_badge_url]
+[![Build][build_badge]][build_badge_url]
+[![Release][release_badge]][release_badge_url]
 
---------------------------------------------------------------------------------
+</center>
 
-[repo_url]: https://framagit.org/rdeville.public/my_dotfiles/tmux
-[license_badge]: https://img.shields.io/badge/License-MIT%2FBeer%20Ware-blue?style=flat-square&logo=open-source-initiative
-[license]: LICENSE
-[build_status_badge]: https://framagit.org/rdeville.public/my_dotfiles/tmux/badges/master/pipeline.svg?style=flat-square&logo=appveyor
-[build_status]: https://framagit.org/rdeville.public/my_dotfiles/tmux/commits/master
+[build_badge]: https://framagit.org/rdeville-public/dotfiles/tmux/badges/main/pipeline.svg
+[build_badge_url]: https://framagit.org/rdeville-public/dotfiles/tmux/-/commits/main
+[release_badge]: https://framagit.org/rdeville-public/dotfiles/tmux/-/badges/release.svg
+[release_badge_url]: https://framagit.org/rdeville-public/dotfiles/tmux/-/releases/
+[license_badge]: https://img.shields.io/badge/Licenses-MIT%20OR%20BEERWARE-blue
+[license_url]: https://framagit.org/rdeville-public/dotfiles/tmux/blob/main/LICENSE
+[changelog_badge]: https://img.shields.io/badge/Changelog-Python%20Semantic%20Release-yellow
+[changelog_badge_url]: https://github.com/python-semantic-release/python-semantic-release
 
-## Table of Content
+My generic public tmux configuration which load custom config stored in
+~/.local/share/tmux (by default) to store configuration per hosts.
 
-  * [Project Documentation](#project-documentation)
+---
 
-<!-- BEGIN MKDOCS TEMPLATE -->
-<!--
-     WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !
-     Modified content will be overwritten when updating
--->
+<!-- BEGIN DOTGIT-SYNC BLOCK EXCLUDED CUSTOM_README -->
+<!-- YOU CAN REPLACE THIS COMMENT AND PUT CUSTOM CONTENT HERE -->
+<!-- YOUR CUSTOM CONTENT WILL NOT BE OVERRIDDEN -->
 
-## Project Documentation
+## 📌 Prerequisites
 
-The complete documentation of the project can be accessed via its [Online
-Documentation][online_doc].
+## ⚙️ Install
 
-If, for any reason, the link to the [Online Documentation][online_doc] is
-broken, you can generate its documention locally on your computer (since the
-documentation is jointly stored within the repository).
+## 🚀 Usage
 
-To do so, you will need the following requirements:
+## ✅ Run tests
 
-  * Python >= 3.8
-  * Pip3 with Python >= 3.8
+<!-- END DOTGIT-SYNC BLOCK EXCLUDED CUSTOM_README -->
 
-First setup a temporary python virtual environment and activate it:
+## 🤝 Contributing
 
-```bash
-# Create the temporary virtual environment
-python3 -m venv .temporary_venv
-# Activate it
-source .temporary_venv/bin/activate
-```
+Contributions, issues and feature requests are welcome!
 
-Now, install required dependencies to render the documentation using
-[mkdocs][mkdocs] in the python virtual environment:
+Feel free to check [issues page][issues_pages].
 
-```bash
-pip3 install -r requirements.docs.txt
-```
+You can also take a look at the [CONTRIBUTING.md][contributing].
 
-Now you can easily render the documentation using [mkdocs][mkdocs] through the
-usage of the following command (some logs will be outputed to stdout):
+[issues_pages]: https://framagit.org/rdeville-public/dotfiles/tmux/-/issues
+[contributing]: https://framagit.org/rdeville-public/dotfiles/tmux/blob/main/CONTRIBUTING.md
 
-```bash
-# Assuming you are at the root of the repo
-# If there is a `mkdocs.local.yml`
-mkdocs serve -f mkdocs.local.yml
-# If there is no `mkdocs.local.yml`, only `mkdocs.yml`
-mkdocs serve
-```
+## 👤 Maintainers
 
-You can now browse the full documentation by visiting
-[http://localhost:8000][localhost].
+- 📧 [**Romain Deville** \<code@romaindeville.fr\>](mailto:code@romaindeville.fr)
+  - Website: [https://romaindeville.fr](https://romaindeville.fr)
+  - Github: [@rdeville](https://github.com/rdeville)
+  - Gitlab: [@r.deville](https://gitlab.com/r.deville)
+  - Framagit: [@rdeville](https://framagit.org/rdeville)
 
-[localhost]: https://localhost:8000
-[mkdocs]: https://www.mkdocs.org/
+## 📝 License
 
-<!-- END MKDOCS TEMPLATE -->
+Copyright © 2022 - 2024 [Romain Deville](code@romaindeville.fr)
 
-[online_doc]: https://docs.romaindeville.fr/rdeville.public/my_dotfiles/tmux/index.html
+This project is under following licenses (**OR**) :
+
+- [MIT][main_license]
+- [BEERWARE][beerware_license]
+
+[main_license]: https://framagit.org/rdeville-public/dotfiles/tmux/blob/main/LICENSE
+[beerware_license]: https://framagit.org/rdeville-public/dotfiles/tmux/blob/main/LICENSE.BEERWARE
+
+<!-- END DOTGIT-SYNC BLOCK MANAGED -->

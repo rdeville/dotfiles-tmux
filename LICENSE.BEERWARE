@@ -12,3 +12,15 @@ WARNING, DO NOT UPDATE CONTENT BETWEEN MKDOCS TEMPLATE TAG !
 Modified content will be overwritten when updating
 -->
 <!-- END MKDOCS TEMPLATE -->
+# BEGIN DOTGIT-SYNC BLOCK MANAGED
+Tmux Config - My generic public tmux configuration which load custom config stored in
+~/.local/share/tmux (by default) to store configuration per hosts.
+
+Copyright © 2022 - 2024 Romain Deville
+
+Licensed under the "THE BEER-WARE LICENSE" (Revision 42):
+Romain Deville wrote this file.
+As long as you retain this notice you can do whatever you want with this stuff.
+If we meet some day, and you think this stuff is worth it, you can buy me a beer
+or coffee in return.
+# END DOTGIT-SYNC BLOCK MANAGED
