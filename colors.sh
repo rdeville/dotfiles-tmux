@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Description
-# ==============================================================================
+# shellcheck disable=SC2034
 # List of materials colors set into tmux variables
 
 red_50="#ffebee"
@@ -278,8 +277,3 @@ blue_grey_900="#263238"
 
 white="#ffffff"
 black="#000000"
-
-# ******************************************************************************
-# EDITOR CONFIG
-# vim: ft=tmux: ts=2: sw=2: sts=2
-# ******************************************************************************
