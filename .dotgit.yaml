@@ -15,7 +15,7 @@ dotgit:
 # Repos description and template usage configuration
 # ------------------------------------------------------------------------------
 name: Tmux Config
-slug: tmux
+slug: tmuxrc
 description: |-
   My generic public tmux configuration which load custom config stored in
   ~/.local/share/tmux (by default) to store configuration per hosts.

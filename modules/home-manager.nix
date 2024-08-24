@@ -1,5 +1,5 @@
 # BEGIN DOTGIT-SYNC BLOCK MANAGED
-{
+self: {
   pkgs,
   lib,
   config,
