@@ -1,6 +1,14 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.1.1 (2024-08-24)
+
+### 🩹 Patch
+
+  * ⬆️ Update templated files from dotgit-sync (!2) by Romain Deville ([`b59a40a`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/b59a40af643fa2682dd20164544f2c65d65096bd))
+  * ⬆️ Upgrade  templated files from DGS by Romain Deville ([`d4bc27e`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/d4bc27ecfc085ac92bd55881d824f6c27f1cab3d)) 🔏
+  * 🔧 Update slug in .dotgit.yaml by Romain Deville ([`ab8182b`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/ab8182b0e7071b875b8eb62c57ca2034f34c4bfd)) 🔏
+
 ## v0.1.0 (2024-07-20)
 
 ### ✨ Minor
@@ -10,9 +18,6 @@
   * ✨ Add support for fzf-switch-session by Romain Deville ([`bf92b64`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bf92b64e8de50d347a282057ce42a05e9b146e90)) 🔏
   * ✨ Add continuum support by Romain Deville ([`51b4112`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/51b411240bfce410aef1790799130f519e5493c7)) 🔏
   * ✨ Add continuum usage and pane border style by Romain Deville ([`f54c5a3`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/f54c5a38f88d5e0dcc538c87110f48e241ca201a)) 🔏
-  * ✨ Add new features (new modules) and update my conf by Romain Deville ([`41acf03`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/41acf039dba4412f7a8d4f8cb0e294d461667575)) 🔏
-  * 🔧 Update tmux.conf &amp; ✨ add my sysstat plugin by Romain Deville ([`8132f9f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/8132f9fb2a2fc62ac719c94c51debe94fde744f0)) 🔏
-  * ✨ Add bootstrap scripts and configuration by Romain Deville ([`fa0e82d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/fa0e82d3001b980da3fb9c993388c82ef3afaba1)) 🔏
 
 ### 🩹 Patch
 
@@ -21,7 +26,6 @@
   * 🐛 Fix bug in bootstrap and battery by Romain Deville ([`2e022fd`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/2e022fd796c8e04c033677f503e922f6402a3936)) 🔏
   * 🐛 Fix minort bug in modules by Romain Deville ([`3dd0036`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3dd00368eee8cf782218ecb77e4860ea5e5ba3e1)) 🔏
   * 💄Update separator colors handling in modules by Romain Deville ([`e0609c2`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/e0609c2a744990688e4e6141c7d95f3235a6ffac)) 🔏
-  * ➕📌 Add pinned dev and docs python dependencies by Romain Deville ([`5d9df5b`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/5d9df5bb031e6928ad1a69dd1cbd4d64f334a7c4)) 🔏
   * 🔧 Update tmux.conf by Romain Deville ([`6f47a68`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6f47a687eaaf200fed7579d6e93271575a7c167f)) 🔏
   * 🔧 Update editorconfig from DGS by Romain Deville ([`3379e19`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3379e19e83780203fff268616bdbce942a7eabe0)) 🔏
   * 🔧 Add python semantic release configuration by Romain Deville ([`bb4da41`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bb4da4179343d489e68a252815f9e8710ca47803)) 🔏
@@ -46,16 +50,8 @@
   * 📄 Update licenses from DGS by Romain Deville ([`219531d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/219531da0f436af22f4696fe3b1b57aa508d5866)) 🔏
   * 📝 Update README from DGS template by Romain Deville ([`1632f42`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/1632f4213ad0e0cb7d5c4877a03f35bc19bc2068)) 🔏
   * 📝 Add CODE_OF_CONDUCT by Romain Deville ([`2dd050f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/2dd050fc68d8ce199d149cfa09cd3b266b3cb459)) 🔏
-  * 🎉📝 Add documentation template with basic CI by Romain Deville ([`0805f02`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/0805f021cf59cedf55471cb2e3afa0ab968d3832)) 🔏
+  * 🔖 v0.1.0 by Romain Deville ([`3f05bcc`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3f05bcc661f5f44b035846431c06ba35e86e69bf)) 🔏
   * 🔥 Remove useless code due to update to DGS by Romain Deville ([`d5d4fb3`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/d5d4fb38b1568d1a76c709d18f144759e8a40e0e)) 🔏
-  * 🔥 Remove now useless docs by Romain Deville ([`fefa515`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/fefa515e8e535e4fa4db6265391f0b58672e601b)) 🔏
   * 🔨 Add devbox config and lock by Romain Deville ([`6b13adf`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6b13adfd02c3063ba3cf378dfdd08d0b8764cb75)) 🔏
   * 🔨 Add pre-commit configuration by Romain Deville ([`ce2d164`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/ce2d1644a87abe422020201ad7274f307dda07a5)) 🔏
   * 🙈 Update gitignore from DGS by Romain Deville ([`c24c042`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/c24c042d736c9a97e2ae7c4c51a0a782e773387d)) 🔏
-  * 🙈 Add &#39;.tmux*.y*ml&#39; and &#39;!*lib&#39; to gitignore by Romain Deville ([`4259c1e`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/4259c1e1763467d525a6b544fb68d8bad7e57278)) 🔏
-
-## v0.0.0 (2024-07-20)
-
-### 🔊 Others
-
-  * 🎉 Initial commit before git flow init by Romain Deville ([`15a4b87`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/15a4b8723edf23cdb16f0879a55c8ed3f0fb785f)) 🔏
