@@ -18,13 +18,15 @@
       url = "github:numtide/flake-utils";
     };
     alejandra = {
-      url = "github:kamadorueda/alejandra/3.0.0";
+      url = "github:kamadorueda/alejandra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # BEGIN DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_INPUT
 
     # END DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_INPUT
   };
+    # BEGIN DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_CUSTOM_VARS
+    # END DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_CUSTOM_VARS
 
   outputs = inputs @ {self, ...}: let
     pkgsForSystem = system:
@@ -42,8 +44,6 @@
       "x86_64-darwin"
       "aarch64-darwin"
     ];
-    # BEGIN DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_CUSTOM_VARS
-    # END DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_CUSTOM_VARS
   in {
     # TOOLING
     # ========================================================================
@@ -54,13 +54,9 @@
         inputs.alejandra.defaultPackage.${system}
     );
     homeManagerModules = {
-      tmuxrc = {
-        imports = [
-          ./modules/home-manager.nix
-        ];
-      };
+      tmuxrc = import ./modules/home-manager.nix self;
     };
-    #     homeManagerModule = self.homeManagerModules.tmuxrc;
+    homeManagerModule = self.homeManagerModules.tmuxrc;
 
     # BEGIN DOTGIT-SYNC BLOCK EXCLUDED NIX_FLAKE_OUTPUTS_CUSTOM
     # Exemple of package
