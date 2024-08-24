@@ -1,6 +1,13 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.1 (2024-08-24)
+
+### 🩹 Patch
+
+  * ⬆️ Update templated files from dotgit-sync (!2) by Romain Deville ([`6b1574c`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/6b1574cebdaa58f15ba2ed946926e137faca83e9))
+  * ⬆️ Update templated files from dotgit-sync by Dotgit Sync [bot] ([`f1fc9a2`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/f1fc9a2c54e12ae8a3921c87d9f6fb39caa633ff))
+
 ## v0.2.0 (2024-08-17)
 
 ### ✨ Minor
@@ -17,7 +24,6 @@
   * 🔧 Add commitlint config from DGS template by Romain Deville ([`364455a`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/364455a8a987739347feecb8d13cbb175176586a)) 🔏
   * 🔧 Add cspell configuration from DGS template by Romain Deville ([`99be06b`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/99be06bd9a1c9cdf3a1f38b82916608c232e4288)) 🔏
   * 🔧 Add editorconfig from DGS template by Romain Deville ([`b94af71`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/b94af71073e14af1206f5462acf49657805acf2e)) 🔏
-  * 🔧 Add dotgit sync configuration by Romain Deville ([`f308e8e`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/f308e8ed7bdb836749192c3af7e9ea13ad596717)) 🔏
 
 ### 🔊 Others
 
@@ -25,6 +31,7 @@
   * 📄 Update licenses from DGS by Romain Deville ([`f3675e7`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/f3675e7462d8623f7abf538d0d02d779662d0201)) 🔏
   * 📝 Add CODE_OF_CONDUCT from DGS by Romain Deville ([`83d7e69`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/83d7e69ec4a5e679060b74d74bd2cd490278f7ab)) 🔏
   * 📝 Update README from DGS by Romain Deville ([`7f244c4`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/7f244c441318884a3d670dc62442058214c9fa08)) 🔏
+  * 🔖 v0.2.0 (NO-CI) by Python Semantic Release [bot] ([`e1cac14`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/e1cac14c353b7573d8776a0bd6107965ea25dc29))
   * 🔥 Remove useless files by Romain Deville ([`25dec54`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/25dec544568ebd52245406fec176fa9771ddf9f2)) 🔏
   * 🔨 Add .envrc from DGS template by Romain Deville ([`4e057fc`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/4e057fc53e6d80f660461e01af97fd561a36ec33)) 🔏
   * 🔨 Add devbox config from DGS template by Romain Deville ([`ac70ded`](https://framagit.org/rdeville-private/dotfiles/tmux-data/-/commit/ac70ded09fb3efafe77c798100d52a5956f28b1a)) 🔏
