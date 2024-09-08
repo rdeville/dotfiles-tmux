@@ -1,12 +1,23 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.1.4 (2024-09-08)
+
+### 🩹 Patch
+
+  * ⬆️ Update flake.lock (!6) by Romain Deville ([`889008d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/889008d78f2b9747aa31735dd8b7cbfd3dae3674))
+  * ⬆️ Update flake.lock by Romain Deville ([`1c14526`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/1c1452670f532b4772b4c8e2b858fa198fec8dac)) 🔏
+
 ## v0.1.3 (2024-09-07)
 
 ### 🩹 Patch
 
   * ⬆️ Update templated files from dotgit-sync (!5) by Romain Deville ([`7f8880f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/7f8880ff3246d44075f2368d101330dbfea2da91))
   * ⬆️ Update templated files from dotgit-sync by Dotgit Sync [bot] ([`226aee7`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/226aee766dd63f1ef237a8450ca6df5ff8a546dd))
+
+### 🔊 Others
+
+  * 🔖 v0.1.3 (NO-CI) by Python Semantic Release [bot] ([`12c4815`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/12c4815c217a04cdd11763ce982b5eb5774541ed))
 
 ## v0.1.2 (2024-08-27)
 
@@ -42,7 +53,6 @@
   * ✨ Add nix packaging and HM modules by Romain Deville ([`626dba6`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/626dba625b8542f0bd744e205c50ab5617bc87f4)) 🔏
   * ✨ Add support for fzf-switch-session by Romain Deville ([`bf92b64`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bf92b64e8de50d347a282057ce42a05e9b146e90)) 🔏
   * ✨ Add continuum support by Romain Deville ([`51b4112`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/51b411240bfce410aef1790799130f519e5493c7)) 🔏
-  * ✨ Add continuum usage and pane border style by Romain Deville ([`f54c5a3`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/f54c5a38f88d5e0dcc538c87110f48e241ca201a)) 🔏
 
 ### 🩹 Patch
 
@@ -51,15 +61,12 @@
   * 🔧 Update tmux.conf by Romain Deville ([`6f47a68`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6f47a687eaaf200fed7579d6e93271575a7c167f)) 🔏
   * 🔧 Update editorconfig from DGS by Romain Deville ([`3379e19`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3379e19e83780203fff268616bdbce942a7eabe0)) 🔏
   * 🔧 Add python semantic release configuration by Romain Deville ([`bb4da41`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bb4da4179343d489e68a252815f9e8710ca47803)) 🔏
-  * 🔧 Add markdownlint configuration by Romain Deville ([`f5eb7c3`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/f5eb7c324c1d4a97463f557eed3946120d553dfa)) 🔏
-  * 🔧 Add commitlint configuration by Romain Deville ([`50d3c5f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/50d3c5f9878dd4c3ebdc5d650bbbdb0390c37ff4)) 🔏
   * 🔧 update plugins download dir by Romain Deville ([`9fc631c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/9fc631c6564492380e41c8f0d0a127232b67ac1e)) 🔏
   * 🔧 update path to download dir by Romain Deville ([`4d455e2`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/4d455e26f5a15335f80d8b545a320c87126a9e09)) 🔏
   * 🔧 update plugins download dir by Romain Deville ([`6d766eb`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6d766eb0c739445fef1a4889fa325adcd6a84cc5)) 🔏
   * 🔧 update path to plugins download dir by Romain Deville ([`a8defdb`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/a8defdbc990cbb70a71a9e5a3f102148464e9002)) 🔏
   * 🔧 Update new path to tmux plugin manager by Romain Deville ([`476d802`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/476d80273534564a4bb455d86c477b33f40e3121)) 🔏
   * 🔧 Upgrade tmux config by Romain Deville ([`21c1dde`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/21c1dde84939007f5b4ec3aa1041912bcfd0f599)) 🔏
-  * 🔧 Deactivate mouse support for tmux by Romain Deville ([`494731c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/494731c2944e6a1c67e761f7064314470dbaf323)) 🔏
 
 ### 🔊 Others
 
