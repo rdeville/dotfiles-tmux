@@ -1,12 +1,23 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.1.5 (2024-10-07)
+
+### 🩹 Patch
+
+  * 🔧 Update shortcut to avoid kitty conflict (!7) by Romain Deville ([`648ea05`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/648ea0526ae6fb8c73c3bb913ea9264b2df111a5))
+  * 🔧 Update shortcut to avoid kitty conflict by Romain Deville ([`8a17771`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/8a177718e3e235dd1c037be46754514dab1e7b78)) 🔏
+
 ## v0.1.4 (2024-09-08)
 
 ### 🩹 Patch
 
   * ⬆️ Update flake.lock (!6) by Romain Deville ([`889008d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/889008d78f2b9747aa31735dd8b7cbfd3dae3674))
   * ⬆️ Update flake.lock by Romain Deville ([`1c14526`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/1c1452670f532b4772b4c8e2b858fa198fec8dac)) 🔏
+
+### 🔊 Others
+
+  * 🔖 v0.1.4 (NO-CI) by Python Semantic Release [bot] ([`b659d2e`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/b659d2e8476535e49590fcb45dc81cec8fb110f6))
 
 ## v0.1.3 (2024-09-07)
 
@@ -51,8 +62,6 @@
 
   * ✨ Upgrade my configuration with DGS (!1) by Romain Deville ([`73dbe7a`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/73dbe7a0c5e022ce2545d0f5b32788096f8ef255))
   * ✨ Add nix packaging and HM modules by Romain Deville ([`626dba6`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/626dba625b8542f0bd744e205c50ab5617bc87f4)) 🔏
-  * ✨ Add support for fzf-switch-session by Romain Deville ([`bf92b64`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bf92b64e8de50d347a282057ce42a05e9b146e90)) 🔏
-  * ✨ Add continuum support by Romain Deville ([`51b4112`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/51b411240bfce410aef1790799130f519e5493c7)) 🔏
 
 ### 🩹 Patch
 
@@ -60,7 +69,6 @@
   * ⚡️ Upgrade bootstrap to setup.sh by Romain Deville ([`cbd0e24`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/cbd0e24d640565ccdb09f77258da1be2c88cc666)) 🔏
   * 🔧 Update tmux.conf by Romain Deville ([`6f47a68`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6f47a687eaaf200fed7579d6e93271575a7c167f)) 🔏
   * 🔧 Update editorconfig from DGS by Romain Deville ([`3379e19`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3379e19e83780203fff268616bdbce942a7eabe0)) 🔏
-  * 🔧 Add python semantic release configuration by Romain Deville ([`bb4da41`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/bb4da4179343d489e68a252815f9e8710ca47803)) 🔏
   * 🔧 update plugins download dir by Romain Deville ([`9fc631c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/9fc631c6564492380e41c8f0d0a127232b67ac1e)) 🔏
   * 🔧 update path to download dir by Romain Deville ([`4d455e2`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/4d455e26f5a15335f80d8b545a320c87126a9e09)) 🔏
   * 🔧 update plugins download dir by Romain Deville ([`6d766eb`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6d766eb0c739445fef1a4889fa325adcd6a84cc5)) 🔏
@@ -73,7 +81,6 @@
   * ♻️(plugins): Huge refacto of my plugins by Romain Deville ([`4d9b69c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/4d9b69ccfd568ec2c9ba7fb4b3be081ade5c0c7c)) 🔏
   * 👷 Add Gitlab CI from DGS by Romain Deville ([`ff163cf`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/ff163cf84bcb54160bb7c5140921d6e9cbec591c)) 🔏
   * 📝 Update README from DGS template by Romain Deville ([`1632f42`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/1632f4213ad0e0cb7d5c4877a03f35bc19bc2068)) 🔏
-  * 📝 Add CODE_OF_CONDUCT by Romain Deville ([`2dd050f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/2dd050fc68d8ce199d149cfa09cd3b266b3cb459)) 🔏
   * 🔖 v0.1.0 by Romain Deville ([`3f05bcc`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3f05bcc661f5f44b035846431c06ba35e86e69bf)) 🔏
   * 🔨 Add devbox config and lock by Romain Deville ([`6b13adf`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/6b13adfd02c3063ba3cf378dfdd08d0b8764cb75)) 🔏
   * 🙈 Update gitignore from DGS by Romain Deville ([`c24c042`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/c24c042d736c9a97e2ae7c4c51a0a782e773387d)) 🔏
