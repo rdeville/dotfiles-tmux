@@ -16,7 +16,8 @@ Modified content will be overwritten when updating
 Tmux Config - My generic public tmux configuration which load custom config stored in
 ~/.local/share/tmux (by default) to store configuration per hosts.
 
-Copyright © 2022 - 2024 Romain Deville
+Copyright © 2022 - 2025
+Romain Deville
 
 Licensed under the "THE BEER-WARE LICENSE" (Revision 42):
 Romain Deville wrote this file.
