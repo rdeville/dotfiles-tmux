@@ -2,7 +2,8 @@
 Tmux Config - My generic public tmux configuration which load custom config stored in
 ~/.local/share/tmux (by default) to store configuration per hosts.
 
-Copyright © 2022 - 2024 Romain Deville
+Copyright © 2022 - 2025
+Romain Deville
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),

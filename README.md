@@ -1,4 +1,5 @@
 <!-- BEGIN DOTGIT-SYNC BLOCK MANAGED -->
+<!-- markdownlint-disable -->
 # 👋 Welcome to Tmux Config
 
 <center>
@@ -72,7 +73,8 @@ You can also take a look at the [CONTRIBUTING.md][contributing].
 
 ## 📝 License
 
-Copyright © 2022 - 2024 [Romain Deville](code@romaindeville.fr)
+Copyright © 2022 - 2025
+ * [Romain Deville \<code@romaindeville.fr\>](code@romaindeville.fr)
 
 This project is under following licenses (**OR**) :
 
