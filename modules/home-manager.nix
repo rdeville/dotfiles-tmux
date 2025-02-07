@@ -1,9 +1,7 @@
-# BEGIN DOTGIT-SYNC BLOCK MANAGED
 self: {
   pkgs,
   lib,
   config,
-  # BEGIN DOTGIT-SYNC BLOCK EXCLUDED NIX_HOME_MANAGER_MODULE_CUSTOM
   ...
 }: let
   cfg = config.tmuxrc;
@@ -34,6 +32,4 @@ in {
       ];
     };
   };
-  # END DOTGIT-SYNC BLOCK EXCLUDED NIX_HOME_MANAGER_MODULE_CUSTOM
 }
-# END DOTGIT-SYNC BLOCK MANAGED
