@@ -10,17 +10,10 @@ SCRIPTPATH="$(
 # -----------------------------------------------------------------------------
 # Define list of modules to setup
 modules=(
-  "battery"
-  "cpu"
-  "disk"
   "date"
-  "git"
-  "hostname"
-  "mem"
   "mode_indicator"
   "session"
-  "uptime"
-  "window"
+  "hostname"
   # Even if not a tmux-systat module required to have sperator
   "separator"
 )
@@ -34,11 +27,22 @@ done
 source "${SCRIPTPATH}/colors.sh"
 source "${SCRIPTPATH}/status_line.sh"
 
+# Set Global Configuration
+status[left_module]="mode_indicator session"
+status[right_module]="hostname date"
+
+date[format]="%a %d %b | %H:%M"
+
 HOST_FILE="${SCRIPTPATH}/hosts/$(hostname).sh"
+DEFAULT_FILE="${SCRIPTPATH}/templates/default.sh"
 if [[ -f "${HOST_FILE}" ]]; then
   # shellcheck disable=SC1090
   source "${HOST_FILE}"
+else
+  # shellcheck disable=SC1090
+  source "${DEFAULT_FILE}"
 fi
+
 # Update fg to bold if SSH
 # -----------------------------------------------------------------------------
 if [[ -n "${SSH_CLIENT}" ]]; then
