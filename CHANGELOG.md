@@ -1,6 +1,24 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.0 (2025-03-19)
+
+### ✨ Minor
+
+  * ✨ Improve default configuration, better user usability, write documentation (!11) by Romain Deville ([`72f4fe8`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/72f4fe8e108a5fa12f5c62d56453076eec5fd56c))
+  * ✨ Update config to be more out of the box with better user customization by Romain Deville ([`8b9d92f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/8b9d92f29387104eb1fd8f9393ee268bb80f6069)) 🔏
+
+### 🩹 Patch
+
+  * ✏️(plugins): Fix minor typo in systat plugins by Romain Deville ([`b92d86d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/b92d86d74664966695a39e87946ddc168de06358)) 🔏
+  * ⬆️ Upgrade devbox.lock by Romain Deville ([`520eeac`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/520eeacdd3003f46147dbe20c61035a5eea6b47f)) 🔏
+  * 📦️(docker): Add Dockerfile to test the config by Romain Deville ([`c9dcd1a`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/c9dcd1a3325344a9f1cdc24e4bf30897dc5487a1)) 🔏
+
+### 🔊 Others
+
+  * ♻️(flake): Refacto nix package and HM module by Romain Deville ([`cfab5fc`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/cfab5fcdf6e76c0d663fd6afe35f664a051f6ea3)) 🔏
+  * 📝 Improve README with basic instructions to setup and use by Romain Deville ([`e7c6b83`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/e7c6b83886bb299b1649da2030d2b9dc776d4c29)) 🔏
+
 ## v0.1.6 (2025-02-08)
 
 ### 🩹 Patch
