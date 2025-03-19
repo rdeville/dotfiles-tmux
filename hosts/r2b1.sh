@@ -1,1 +1,0 @@
-../templates/mini_computer.sh
