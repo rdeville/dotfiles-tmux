@@ -32,7 +32,7 @@ _get_date_settings() {
 }
 
 _get_date_value() {
-  date[value]=$(date +"${date[format]}")
+  date[value]=$(date +"${date[format]} ")
 }
 
 _compute_bg_fg() {

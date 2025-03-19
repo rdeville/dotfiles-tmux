@@ -31,7 +31,7 @@ _get_hostname_settings() {
 }
 
 _get_hostname_value() {
-  hostname[value]+="$(hostname)"
+  hostname[value]+="$(hostname) "
 }
 
 _compute_bg_fg() {
