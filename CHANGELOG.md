@@ -1,6 +1,25 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.5.0 (2025-03-19)
+
+### ✨ Minor
+
+  * ✨(flake): Add nix packaging through flakes by Romain Deville ([`34cdabb`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/34cdabb5fe36eb009e4193654a562e615f4ed079)) 🔏
+
+### 🩹 Patch
+
+  * ⚡️ Improve configuration due to public repos changes (!9) by Romain Deville ([`6e0904b`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/6e0904bb01781bc07d8121a11729579e0990ee18))
+  * 🔧 Add custom default config that loads host config by Romain Deville ([`ba4b469`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/ba4b469bb2301fa73d2c7ac19d387edd93e7fc50)) 🔏
+  * 🔧(templates): Add colors list from materialui by Romain Deville ([`441b175`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/441b175eed70e0c7b9000e11ba9a7c05db4fb1c7)) 🔏
+
+### 🔊 Others
+
+  * ♻️(hosts) Move shell config to tmux config due to public repo refacto by Romain Deville ([`4965197`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/4965197201808c3b3213ec7b975aeaeb4f5ae9fb)) 🔏
+  * ♻️(templates) Move shell config to tmux config due to public repo refacto by Romain Deville ([`77665bd`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/77665bd62a19c2a8c22785e9941d17a67cd3c495)) 🔏
+  * 🔥 Remove now useless scripts, moved to public config by Romain Deville ([`ecde7f0`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/ecde7f0524f18607a37fd65059b5000fba900b3d)) 🔏
+  * 🙈 Update gitignore by Romain Deville ([`6be5197`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/6be5197f4c8c8bb2d6d7a444d4f57a6f3b43e0ff)) 🔏
+
 ## v0.4.0 (2025-03-17)
 
 ### ✨ Minor
