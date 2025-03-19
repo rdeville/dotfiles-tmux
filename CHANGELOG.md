@@ -1,6 +1,17 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.1 (2025-03-19)
+
+### 🩹 Patch
+
+  * ⚡️ Move options from `config.tmuxrc` to `config.programs.tmuxrc` (!12) by Romain Deville ([`1fe448c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/1fe448c0d57f5be67466b0b7162bfc8b1dc67aca))
+  * ⚡️(flake): Move options from `config.tmux` to `config.programs.tmuxrc` by Romain Deville ([`4eef532`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/4eef532ca4cfd24e7a5109e22e39366f31f18d14)) 🔏
+
+### 🔊 Others
+
+  * 🔥 Remove Dockerfile since not working by Romain Deville ([`87bf577`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/87bf5776c6d04689b9c504e88f24caf7a3f37a2e)) 🔏
+
 ## v0.2.0 (2025-03-19)
 
 ### ✨ Minor
