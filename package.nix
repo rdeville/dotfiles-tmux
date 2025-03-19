@@ -8,6 +8,7 @@ pkgs.stdenv.mkDerivation {
       *.md \
       LICENSE* \
       tmux.conf \
+      config.sh \
       plugins \
       $out
   '';
