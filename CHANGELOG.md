@@ -1,6 +1,13 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.5.1 (2025-03-23)
+
+### 🩹 Patch
+
+  * 🔧 Update templates config due to main repo update (!10) by Romain Deville ([`5fb7d63`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/5fb7d63ff4605baac0ab7a18e8c437593e4e95a6))
+  * 🔧 Update templates config due to main repo update by Romain Deville ([`8a882b7`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/8a882b715b4132d599edf44f045a6f4823a7b4ff))
+
 ## v0.5.0 (2025-03-19)
 
 ### ✨ Minor
