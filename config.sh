@@ -8,7 +8,7 @@ SCRIPTPATH="$(
 
 # Setup pane colorations
 # -----------------------------------------------------------------------------
-pane="#{?#{pane_active},#[fg=#{@window_current_fg}]#[bg=#{@window_current_bg}],#[fg=#ffffff]#[bg=#37474f]}"
+pane="#{?#{pane_active},#[fg=#{@pane-active-border-bg}]#[bg=#{@pane-active-border-fg}],#[fg=#{@pane-border-bg}]#[bg=#{@pane-border-fg}]}"
 
 if [[ "$(uname)" == "Darwin" ]]; then
   ps_cmd="#(ps -t #{pane_tty} -o args= | head -n 1)"

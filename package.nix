@@ -2,6 +2,7 @@
 pkgs.stdenv.mkDerivation {
   name = "tmuxrc";
   src = ./.;
+  phases = [ "unpackPhase" "installPhase" ];
   installPhase = ''
     mkdir -p $out;
     cp -r \
@@ -9,6 +10,7 @@ pkgs.stdenv.mkDerivation {
       LICENSE* \
       tmux.conf \
       config.sh \
+      config \
       plugins \
       $out
   '';

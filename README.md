@@ -90,9 +90,11 @@ If you use nix Home-Manager with flake, add the following configuration to your
           [...]
           # Finally, your home.nix here:
           ({...}: {
-            tmuxrc = {
-              enable = true;
-            };
+            programs = {
+              tmuxrc = {
+                enable = true;
+              };
+            }
           })
         ];
       };
@@ -101,6 +103,9 @@ If you use nix Home-Manager with flake, add the following configuration to your
   };
 }
 ```
+
+⚠️ WARNING: The home-manager `programs.tmuxrc` provided by this repo may conflict
+with module `programs.tmux`.
 
 ### Manually
 
@@ -115,9 +120,212 @@ work.
 
 ## 🚀 Usage
 
-Simply run `tmux`, this should load the configuration automagically.
+Once clone to `~/.config/tmux`, simply run `tmux`, this should load the
+configuration automagically.
 
-### Keyboard Added Bindings
+If you want, you can also clone the repo elsewhere and build and start a
+container based on the container provided with the `Dockefile`.
+
+To do so, one in the repos, run following command:
+
+```bash
+docker build -t tmux-test .
+docker run --rm -it --name tmux-test tmux-test
+```
+
+This will run a shell in the container to test the tmux configuration without
+polluting your dotfiles.
+
+## ⚙️ Configuration
+
+You can configure almost everything quiet easily. To do so, create a file
+`~/.local/share/tmux/tmux.conf` with your own configuration.
+
+The file `config/custom.conf` provide a commented example you can copy/paste and
+use as base.
+
+### Customization
+
+You can choose to change basic tmux configuration like show below :
+
+```conf
+# Variable Configuration
+# =============================================================================
+# While status-left and status-right below should be in `tmux.options.conf`, I
+# put them here to provide a single configuration file example for users
+
+# Status line
+# -----------------------------------------------------------------------------
+# Set status line style
+set -g status-style "fg=#{@status_fg},bg=#{@status_bg}"
+
+# Left status
+# -----------------------------------------------------------------------------
+# Length of the left status bar
+set -g status-left-length 100
+# Content of the left status bar
+set -g status-left "#{datstatus-mode-indicator}#{datstatus-session}"
+
+# Right status
+# -----------------------------------------------------------------------------
+# Lengtht of the right status bar
+set -g status-right-length 100
+# Content of the right status bar
+set -g status-right "#{datstatus-hostname}#{datstatus-uptime}#{datstatus-date}"
+
+# Windon Style
+# -----------------------------------------------------------------------------
+# Window segments separator
+set -g window-status-separator ""
+# Format of the window list
+setw -g window-status-format "#{datstatus-window}"
+setw -g window-status-current-format "#{datstatus-window-current}"
+
+# Main status line information based from arrays defined above
+# -----------------------------------------------------------------------------
+# Set status line style
+set -g status-style "fg=#{@status-fg},bg=#{@status-bg}"
+# Command line style
+set -g message-style "fg=#{@message-fg},bg=#{@message-bg}"
+# Set status line message command style. This is used for the command prompt
+# with vi(1) keys when in command mode.
+set -g message-command-style "fg=#{@message-command-fg},bg=#{@message-command-bg}"
+
+# Pane Borders
+# -----------------------------------------------------------------------------
+# Set color and style of pane border
+set -g pane-border-lines heavy
+set -g pane-border-indicators off
+
+set -g pane-border-style "fg=#{@pane-border-fg},bg=#{@pane-border-bg}"
+set -g pane-active-border-style "fg=#{@pane-active-border-fg},bg=#{@pane-active-border-bg}"
+
+# Load pane configuration since it depends on the OS for the ps-cmd
+if "test -f ~/.config/tmux/config.sh" {
+  run "~/.config/tmux/config.sh"
+}
+```
+
+### Configuration activation
+
+You can choose which part of the configuration provided by this repos and which
+plugin to activate with following configuration:
+
+```conf
+# Set activation values
+# =============================================================================
+# Load plugins
+set -g @load-plugins "true"
+# Activate/deactivate plugins
+set -g @load-plugins-vim-tmux-navigator "true"
+set -g @load-plugins-tmux-open-nvim " true"
+set -g @load-plugins-tmux-fzf-url "true"
+set -g @load-plugins-tmux-fzf-session "true"
+set -g @load-plugins-tmux-fzf-session-switch "true"
+set -g @load-plugins-tmux-fzf-links "true"
+set -g @load-plugins-tmux-thumbs "true"
+set -g @load-plugins-datstatus "true"
+
+# Load my options
+set -g @load-options "true"
+
+# Load my bindings
+set -g @load-bindings "true"
+
+```
+
+### Plugins
+
+Finally, you can override plugins with variables shown below:
+
+```conf
+# Plugins Configurations
+# =============================================================================
+# Tmux FZF Session Switch
+# -----------------------------------------------------------------------------
+# Search session only
+set -g @fzf-goto-session-only "true"
+# Key binding
+set -g @fzf-goto-session-without-prefix "true"
+set -g @fzf-goto-session "M-s"
+set -g @fzf-goto-win-width 80
+set -g @fzf-goto-win-height 20
+
+# Tmux FZF Links
+# -----------------------------------------------------------------------------
+set -g @fzf-links-key "p"
+set -g @fzf-links-history-lines "10"
+set -g @fzf-links-editor-open-cmd "ton +%line '%file'"
+
+# Tmux Datstatus
+# -----------------------------------------------------------------------------
+# Set status line colors
+set -g @status-bg "#616161"
+set -g @status-fg "#f5f5f5"
+
+# Set message line colors
+set -g @message-bg "#f9a825"
+set -g @message-fg "#000000"
+
+# Set message line colors
+set -g @message-bg "#f9a825"
+set -g @message-fg "#000000"
+
+# Set pane border colors
+set -g @pane-border-fg "#263238"
+set -g @pane-border-bg "#263238"
+set -g @pane-active-border-fg "#43A047"
+set -g @pane-active-border-bg "#263238"
+
+# Separator char
+set -g @datstatus-separator-right ""
+set -g @datstatus-separator-left ""
+
+# Set Mode Indicator Configuration
+# Wait Mode
+set -g @mode-indicator-wait-format " 󰀡 WAIT " # set -g @mode-indicator-wait-bg "#3F51B5"
+set -g @mode-indicator-wait-fg "#fafafa"
+# Copy Mode
+set -g @mode-indicator-copy-format "  COPY "
+set -g @mode-indicator-copy-bg "#ffeb3b"
+set -g @mode-indicator-copy-fg "#212121"
+# Sync Mode
+set -g @mode-indicator-sync-format "  SYNC "
+set -g @mode-indicator-sync-bg "#ff5722"
+set -g @mode-indicator-sync-fg "#fafafa"
+# Default Mode
+set -g @mode-indicator-empty "  TMUX "
+set -g @mode-indicator-empty-bg "#cddc39"
+set -g @mode-indicator-empty-fg "#212121"
+
+# Set Session Configuration
+set -g @session-bg "#4E342E"
+set -g @session-fg "#ffffff"
+set -g @session-format "   #S "
+
+set separator module
+set -g @separator-right ""
+set -g @separator-left ""
+
+set date
+set -g @uptime-format "   #(uptime | awk -F'( |,|:)+' '{d=h=m=0; if (\$7==\"min\") m=\$6; else {if (\$7~/^day/) {d=\$6;h=\$8;m=\$9} else {h=\$6;m=\$7}}} {if (d!=0) {print d\":\"h\":\"m } else {print h\":\"m'}}) "
+set -g @date-fg "#ffffff"
+set -g @date-bg "#424242"
+
+# Set window
+# Normal Window
+set -g @window-default-normal-bg "#8bc34a"
+set -g @window-default-normal-fg "#76ff03"
+set -g @window-default-normal-format" " #I:#W "
+# Current Window
+set -g @window-default-current-bg "#76ff03"
+set -g @window-default-current-fg "#000000"
+set -g @window-default-current-format " #I:#W "
+```
+
+## ⌨️ Bindings
+
+### Added Bindings
 
 Below are some of my main keyboard shortcuts.
 
@@ -218,7 +426,7 @@ bind -T off F12 "
 
 ```
 
-### Keyboard Remove Binding
+### Removed Bindings
 
 Below are deactivated default Tmux shortcuts since I remapped most of them:
 
@@ -249,38 +457,6 @@ unbind M-Up  # resize 5 rows up
 unbind M-Down # resize 5 rows down
 unbind M-Right # resize 5 rows right
 unbind M-Left # resize 5 rows left
-```
-
-### Custom Configuration
-
-If you want to change colors, you can do it by creating file
-`~/.local/share/tmux/tmux.conf` with the following content with your updated
-values :
-
-```tmux
-# Tmux Systat Plugins (local)
-# -----------------------------------------------------------------------------
-# Set separator module
-set -g @separator_right ""
-set -g @separator_left ""
-# Set status line colors
-set -g @status_bg "#616161"
-set -g @status_fg "#f5f5f5"
-# Set date
-set -g @date_format "%a %d %b | %H:%M"
-set -g @date_fg "#ffffff"
-set -g @date_bg "#424242"
-# Set window
-set -g @window_format "#I:#W"
-set -g @window_bg "#9e9e9e"
-set -g @window_fg "#616161"
-set -g @window_current_bg "#bdbdbd"
-set -g @window_current_fg "#000000"
-# Set pane border colors
-set -g @pane_border_fg "#263238"
-set -g @pane_border_bg "#263238"
-set -g @pane_active_border_fg "#9e9e9e"
-set -g @pane_active_border_bg "#263238"
 ```
 
 <!-- END DOTGIT-SYNC BLOCK EXCLUDED CUSTOM_README -->
