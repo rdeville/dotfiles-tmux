@@ -1,6 +1,21 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.2 (2025-03-23)
+
+### 🩹 Patch
+
+  * ⚡️ Refacto to increase performance, Improve Doc, Provide Dockerfile (!13) by Romain Deville ([`a7ad24b`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/a7ad24b2dce115204277cab806610d732b946f4e))
+  * 📦️(nix): Update nix pkgs with new structure by Romain Deville ([`64f454c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/64f454cca58994991d1c1b44e4ed175b2272a42c)) 🔏
+  * 🔧(tmux): Split config file to be clearer by Romain Deville ([`5ad88f7`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/5ad88f7107021733f362def33d7f99446c940aff)) 🔏
+
+### 🔊 Others
+
+  * ♻️(plugins): Refacto and uptomize my plugins by Romain Deville ([`8058201`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/80582014ff49d2b306f9822e2254c6f73a05dbe1)) 🔏
+  * 📝 Improve README documentation by Romain Deville ([`8b2875b`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/8b2875b3c3fee899161fb7432ba1de373d8fd087)) 🔏
+  * 🔨 Add Makefile to easy development by Romain Deville ([`95858e6`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/95858e60670327fb16547b30ab14755690d59c28)) 🔏
+  * 🔨(OCI): Add Dockerfile to test config in isolated environment by Romain Deville ([`e12df2f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/e12df2f8ec2d0a84346b8d3d8bac5c163d06d5d5)) 🔏
+
 ## v0.2.1 (2025-03-19)
 
 ### 🩹 Patch
