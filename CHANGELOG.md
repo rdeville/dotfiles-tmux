@@ -1,6 +1,12 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.5.3 (2025-04-20)
+
+### 🩹 Patch
+
+  * ⚡️(host): Add kenobi router configuration by Romain Deville ([`4565cdb`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/4565cdbec11e5c939deb2a6b3e5e5b9aa94b36bf))
+
 ## v0.5.2 (2025-04-20)
 
 ### 🩹 Patch
