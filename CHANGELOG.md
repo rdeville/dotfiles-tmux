@@ -1,6 +1,12 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.5.2 (2025-04-20)
+
+### 🩹 Patch
+
+  * 🔧(hosts): Switch luke and leia to server templates by Romain Deville ([`060c5b1`](https://framagit.org/rdeville-private/dotfiles/tmux/-/commit/060c5b124c0b9276438e0d5d82d2def256e76496)) 🔏
+
 ## v0.5.1 (2025-03-23)
 
 ### 🩹 Patch
