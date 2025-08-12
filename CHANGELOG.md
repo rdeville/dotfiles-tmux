@@ -1,6 +1,19 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.3 (2025-08-12)
+
+### 🩹 Patch
+
+  * ⬆️ Update flake.lock by Romain Deville ([`7989340`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/7989340ff519a9da1efa35d69d76d59236fab711)) 🔏
+  * 🐛(plugin/uptime): Fix default uptime command and bump deps (!14) by Romain Deville ([`068b720`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/068b7206a6abbdfb4756c83ded593120b6460d6a))
+  * 🐛(plugin/uptime): Fix default uptime command by Romain Deville ([`313dbd9`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/313dbd9fdc3268f6fb81d85be8d936ffd500f444)) 🔏
+  * 🔧(flake): Update input nixpkgs to nixos 25.05 by Romain Deville ([`df0a16f`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/df0a16fc965fcfd0057781b86db412537e095787)) 🔏
+
+### 🔊 Others
+
+  * 🙈 Add result, the output of nix build by Romain Deville ([`93d0a1c`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/93d0a1ce284c49cb6bb749fb8e988d60ee403a91)) 🔏
+
 ## v0.2.2 (2025-03-23)
 
 ### 🩹 Patch
