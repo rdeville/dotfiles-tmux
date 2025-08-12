@@ -8,7 +8,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "nixpkgs/nixos-24.05";
+      url = "nixpkgs/nixos-25.05";
     };
   };
 
