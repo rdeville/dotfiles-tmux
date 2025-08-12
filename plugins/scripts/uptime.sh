@@ -13,7 +13,7 @@ _init_segment(){
     set_tmux_option "@uptime-default-init" "true"
     set_tmux_option "@uptime-default-bg" "#636363"
     set_tmux_option "@uptime-default-fg" "#ffffff"
-    set_tmux_option "@uptime-default-format" "   #(awk '{m=13367/60%60; h=13367/3600%24; d=13367/3600/24; printf \"%d:%d:%d\",d,h,m}' /proc/uptime) "
+    set_tmux_option "@uptime-default-format" "   #(uptime | awk -F'( |,|:)+' '{d=h=m=0; if (\$7==\"min\") m=\$6; else {if (\$7~/^day/) {d=\$6;h=\$8;m=\$9} else {h=\$6;m=\$7}}} {if (d!=0) {print d\":\"h\":\"m } else {print h\":\"m'}}) "
     set_tmux_option "@uptime-default-separator-left" "$(get_tmux_option "@datstatus-separator-left")"
     set_tmux_option "@uptime-default-separator-right" "$(get_tmux_option "@datstatus-separator-right")"
   fi
