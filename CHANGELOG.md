@@ -1,6 +1,14 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.4 (2025-08-12)
+
+### 🩹 Patch
+
+  * ⬆️(devbox): Sync devbox from DGS template (!15) by Romain Deville ([`3e334fb`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/3e334fb7f72d97f13bc9413d3fcbbdd104e23d01))
+  * ⬆️(devbox): Update devbox.lock by Romain Deville ([`5db4fdc`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/5db4fdcd925d1838978ec0dc723336807e88053e)) 🔏
+  * ⬆️ Update templated files from dotgit-sync by Dotgit Sync [bot] ([`b2a6b68`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/b2a6b6844e3c26855bce858f03d6ad5551fdac3e)) 🔏
+
 ## v0.2.3 (2025-08-12)
 
 ### 🩹 Patch
