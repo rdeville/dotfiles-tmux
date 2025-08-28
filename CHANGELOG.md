@@ -1,6 +1,13 @@
 <!-- markdownlint-disable-file -->
 # CHANGELOG
 
+## v0.2.5 (2025-08-28)
+
+### 🩹 Patch
+
+  * 🔧(config/default): Add default mode color (e.g. highlight when in copy-mode) (!16) by Romain Deville ([`444d405`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/444d40595a8b00f5aadfedfbbe85c0f1188caa96))
+  * 🔧(config/default): Add default mode color (e.g. highlight when in copy-mode) by Romain Deville ([`7258e9d`](https://framagit.org/rdeville-public/dotfiles/tmux/-/commit/7258e9d7e7ae276ebca955824b30d943e414c91b)) 🔏
+
 ## v0.2.4 (2025-08-12)
 
 ### 🩹 Patch
