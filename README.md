@@ -49,7 +49,11 @@ My generic public tmux configuration which load custom config stored in
 
 **There is no need to maintain external dotfile repos anymore.**
 
-**These configuration have been integrated to my private NixOS Configuration.**
+**These configuration have been integrated to my public
+[NixOS Configuration](https://framagit.org/rdeville-public/dotfiles/nixos-config).**
+
+**The integration has been done in [this folder](https://framagit.org/rdeville-public/dotfiles/nixos-config/-/tree/main/home-manager/flavors/_core/tmux/tmuxrc)
+of my NixOS configuration.**
 
 **And so now, this repos is archive, feel free to fork it if you want.**
 
