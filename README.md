@@ -22,13 +22,10 @@
 
 [![Licenses: (MIT OR BEERWARE)][license_badge]][license_url]
 [![Changelog][changelog_badge]][changelog_badge_url]
-[![Build][build_badge]][build_badge_url]
 [![Release][release_badge]][release_badge_url]
 
 </center>
 
-[build_badge]: https://framagit.org/rdeville-public/dotfiles/tmux/badges/main/pipeline.svg
-[build_badge_url]: https://framagit.org/rdeville-public/dotfiles/tmux/-/commits/main
 [release_badge]: https://framagit.org/rdeville-public/dotfiles/tmux/-/badges/release.svg
 [release_badge_url]: https://framagit.org/rdeville-public/dotfiles/tmux/-/releases/
 [license_badge]: https://img.shields.io/badge/Licenses-MIT%20OR%20BEERWARE-blue
@@ -42,13 +39,21 @@ My generic public tmux configuration which load custom config stored in
 ---
 
 <!-- BEGIN DOTGIT-SYNC BLOCK EXCLUDED CUSTOM_README -->
-<!-- TODO: @rdeville: Add Asciinema demo one day
-## 🎦 Showcase
 
-Sometimes, image worth thousands words. So below is a showcase of this tmux
-configuration without customization.
+# ARCHIVE NOTICE
 
--->
+**Since:**
+
+- **This did not move a lot since few years**
+- **All of my machines are now either under NixOS or Home-Manage**
+
+**There is no need to maintain external dotfile repos anymore.**
+
+**These configuration have been integrated to my private NixOS Configuration.**
+
+**And so now, this repos is archive, feel free to fork it if you want.**
+
+---
 
 ## 📌 Prerequisites
 
